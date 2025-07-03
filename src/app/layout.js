@@ -13,7 +13,7 @@ const openSans = Open_Sans({
 export const metadata = {
   title: 'Portfolio',
   icons: {
-    icon: '/logo.png', // koristi logo.png iz /public
+    icon: '/logo.png', 
   },
 }
 
