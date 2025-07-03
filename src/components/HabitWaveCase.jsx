@@ -11,7 +11,7 @@ import usabilityStudy from "@/assets/habitwave/usabilitystudy.png";
 import lowFidelity from "@/assets/habitwave/lowfi.PNG";
 import highFidelity from "@/assets/habitwave/highfi.PNG";
 import seaburyImage from "@/assets/habitwave/seabury.png";
-import inkyImage from "@/assets/habitwave/inky.png";
+import inkyImage from "@/assets/habitwave/inkyy.png";
 
 export default function HabitWavePage() {
   return (
