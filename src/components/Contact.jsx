@@ -4,7 +4,8 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-16 px-12 md:px-24 bg-[linear-gradient(130deg,_#68eed3,_#00cc4b)] rounded-3xl shadow-lg"
+      className="py-16 px-12 md:px-24 rounded-3xl shadow-lg"
+      style={{ background: "var(--contact-grad)" }}
     >
       <div className="max-w-3xl mx-auto text-center space-y-6">
         <h2 className="text-3xl md:text-4xl font-bold text-white">

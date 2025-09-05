@@ -1,34 +1,47 @@
-import Image from 'next/image'
-import profileImage from '../assets/ja.png'
+import Image from "next/image";
+import profileImage from "../assets/ja.png";
 
 export default function Hero() {
   return (
-    <section className="px-8 py-8 flex flex-col md:flex-row md:items-stretch gap-8">
+    <section
+      id="hero"
+      className="px-8 py-8 flex flex-col md:flex-row md:items-stretch gap-8"
+    >
       {/* Leva kolona: 2.5/4 širine, gradientna pozadina */}
       <div
-        className="w-full md:w-[62.5%] rounded-3xl p-10 flex flex-col justify-center space-y-8 shadow-lg"
+        className="w-full md:w-[62.5%] rounded-3xl p-10 flex flex-col justify-center space-y-8 shadow-lg dark:shadow-none transition-colors"
         style={{
-          background: '#eaebec',
-          backgroundImage: 'radial-gradient(at 55% 55%, #68eed3 0px, transparent 35%), radial-gradient(at 65% 65%, #00cc4b 0px, transparent 35%)',
+          background: `
+      radial-gradient(at 55% 55%, var(--hero-grad1) 0, transparent 35%),
+      radial-gradient(at 65% 65%, var(--hero-grad2) 0, transparent 35%),
+      var(--hero-base)
+    `,
         }}
       >
         {/* Naslov i opis */}
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Hey,<br />
-            I'm Njegoš, a UX/UI designer<br />
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[var(--foreground)]">
+            Hey,
+            <br />
+            I'm Njegoš, a UX/UI designer
+            <br />
             and front-end developer
           </h1>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            Creating fresh, user-friendly designs and snappy, responsive front-ends.  
-            I love turning complex problems into simple, beautiful solutions.
+          <p className="text-lg leading-relaxed text-[var(--foreground)]">
+            Creating fresh, user-friendly designs and snappy, responsive
+            front-ends. I love turning complex problems into simple, beautiful
+            solutions.
           </p>
         </div>
 
-        {/* Dugme */}
+        {/* Dugme – crno u light, belo u dark */}
         <a
           href="#projects"
-          className="w-max inline-block bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition"
+          className="w-max inline-block px-6 py-3 rounded-full font-medium transition-opacity duration-200 hover:opacity-80"
+          style={{
+            backgroundColor: "var(--cta-bg)",
+            color: "var(--cta-fg)",
+          }}
         >
           See my work
         </a>
@@ -46,5 +59,5 @@ export default function Hero() {
         />
       </div>
     </section>
-  )
+  );
 }

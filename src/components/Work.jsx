@@ -1,7 +1,6 @@
 // src/components/Work.jsx
 import Image from 'next/image'
 import Link from 'next/link'
-import profileImage from '../assets/ja.png'
 import mywork1 from '../assets/mywork1.png'
 import mywork2 from '../assets/mywork2.png'
 import mywork3 from '../assets/mywork3.png'
@@ -29,7 +28,10 @@ export default function Work() {
             >
               Role: UX/UI Design
             </p>
-            <Link href="/habitwave" className="rounded-3xl overflow-hidden shadow-md border border-gray-200">
+            <Link
+              href="/habitwave"
+              className="rounded-3xl overflow-hidden shadow-md border border-gray-200 dark:border-none"
+            >
               <Image
                 src={mywork1}
                 alt="Project 1"
@@ -52,7 +54,7 @@ export default function Work() {
               href="https://dexsolutions.biz"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-3xl overflow-hidden shadow-md border border-gray-200"
+              className="rounded-3xl overflow-hidden shadow-md border border-gray-200 dark:border-none"
             >
               <Image
                 src={mywork2}
@@ -73,10 +75,10 @@ export default function Work() {
               Role: UX/UI Design
             </p>
             <a
-              href="https://dexsolutions.biz"
+              href="https://codewaveteam.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-3xl overflow-hidden shadow-md border border-gray-200"
+              className="rounded-3xl overflow-hidden shadow-md border border-gray-200 dark:border-none"
             >
               <Image
                 src={mywork3}
@@ -89,7 +91,7 @@ export default function Work() {
           </div>
 
           {/* Project 4 */}
-          <div className="flex flex-col gap-2 items-center">
+          {/* <div className="flex flex-col gap-2 items-center">
             <p
               className="text-xl sm:text-2xl font-semibold uppercase"
               style={{ WebkitTextStroke: '0.5px #000', color: 'transparent' }}
@@ -100,7 +102,7 @@ export default function Work() {
               href="https://miconsultancy.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-3xl overflow-hidden shadow-md border border-gray-200"
+              className="rounded-3xl overflow-hidden shadow-md border border-gray-200 dark:border-none"
             >
               <Image
                 src={mywork4}
@@ -110,7 +112,7 @@ export default function Work() {
                 height={600}
               />
             </a>
-          </div>
+          </div> */}
 
           {/* Project 5 */}
           <div className="flex flex-col gap-2 items-center">
@@ -120,7 +122,7 @@ export default function Work() {
             >
               Role: UX/UI Design
             </p>
-            <div className="rounded-3xl overflow-hidden shadow-md border border-gray-200">
+            <div className="rounded-3xl overflow-hidden shadow-md border border-gray-200 dark:border-none">
               <Image
                 src={mywork5}
                 alt="Project 5"
@@ -132,7 +134,7 @@ export default function Work() {
           </div>
 
           {/* Project 6 */}
-          <div className="flex flex-col gap-2 items-center">
+          {/* <div className="flex flex-col gap-2 items-center">
             <p
               className="text-xl sm:text-2xl font-semibold uppercase"
               style={{ WebkitTextStroke: '0.5px #000', color: 'transparent' }}
@@ -143,7 +145,7 @@ export default function Work() {
               href="https://rentacaruzice.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-3xl overflow-hidden shadow-md border border-gray-200"
+              className="rounded-3xl overflow-hidden shadow-md border border-gray-200 dark:border-none"
             >
               <Image
                 src={mywork6}
@@ -153,7 +155,7 @@ export default function Work() {
                 height={600}
               />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -1,27 +1,76 @@
 @import "tailwindcss";
 
+/* ── LIGHT (ne diramo postojeće vrednosti) ───────────────────────── */
 :root {
   --background: #ffffff;
   --foreground: #111827;
-  --font-open-sans: 'Open Sans', sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+
+  /* Hero baza (svetla) */
+  --hero-base: #eaebec;
+  --hero-grad1: #68eed3;
+  --hero-grad2: #00cc4b;
+  --about-green: #22c55e; /* light */
+  --about-yellow: #facc15;
+  --about-red: #ef4444;
+  --about-blue: #3b82f6;
+  --contact-grad: linear-gradient(130deg, #68eed3, #00cc4b); /* light */
+
+  /* CTA dugme: crno/belo u light */
+  --cta-bg: #000000;
+  --cta-fg: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Ostavljam tvoj postojeći prefers-color-scheme blok netaknut */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
-    --foreground: #000000;
+    --background: #ffffff; /* ostavljeno kako si tražio */
+    --foreground: #000000; /* ostavljeno kako si tražio */
   }
 }
 
+/* Osnovni body (kao kod tebe) */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── DARK (samo dodatak) ─────────────────────────────────────────── */
+.dark {
+  --background: #111827; /* tamna pozadina */
+  --foreground: #f9fafb; /* svetli tekst */
+
+  /* Hero baza (tamna) */
+  --hero-base: #0f172a;
+  --hero-grad1: #4f46e5; /* indigo/plava */
+  --hero-grad2: #9333ea; /* ljubičasta */
+  --about-green: #10b981; /* emerald / neon zelena */
+  --about-yellow: #eab308; /* amber / zlata */
+  --about-red: #ec4899; /* pinkish / fuchsia */
+  --about-blue: #6366f1; /* indigo-plava */
+  --contact-grad: linear-gradient(130deg, #4f46e5, #9333ea); /* dark */
+
+  /* CTA dugme: belo/crno u dark */
+  --cta-bg: #ffffff;
+  --cta-fg: #000000;
+}
+
+/* Outline → solid samo u dark (ako koristiš .outline-heading / .outline-sub) */
+.dark .outline-heading,
+.dark .outline-sub {
+  -webkit-text-stroke: 0px;
+  color: var(--foreground);
+}
+
+/* Work sekcija: naslovi/podnaslovi SOLID beli u dark */
+.dark #projects h2,
+.dark #projects p {
+  -webkit-text-stroke: 0px !important;
+  color: #ffffff !important;
+}
+/* About sekcija */
+.dark #about h2 {
+  -webkit-text-stroke: 0 !important;
+  color: #ffffff !important;
 }
