@@ -13,22 +13,17 @@ export default function Hero() {
         <div className="flex flex-col gap-6 text-center lg:text-left">
           <h1
             className={`
-    text-3xl sm:text-4xl md:text-4xl font-extrabold
-    tracking-tight leading-snug sm:leading-tight md:leading-[1.1]
-    bg-clip-text text-transparent
-  `}
+              text-3xl sm:text-4xl md:text-4xl font-extrabold
+              tracking-tight leading-snug sm:leading-tight md:leading-[1.1]
+              bg-clip-text text-transparent
+            `}
             style={{
               backgroundImage: `linear-gradient(to right, var(--hero-grad1), var(--hero-grad2))`,
             }}
           >
             Hey, I&apos;m Njegoš <br />
-            <span className="text-[var(--foreground)]">
-              UX/UI Designer
-            </span>{" "}
-            <br />
-            <span className="text-[var(--foreground)]">
-              Front-end Developer
-            </span>
+            <span className="text-[var(--foreground)]">UX/UI Designer</span> <br />
+            <span className="text-[var(--foreground)]">Front-end Developer</span>
           </h1>
 
           <p className="max-w-lg mx-auto lg:mx-0 text-base md:text-lg leading-relaxed text-[var(--foreground)]/80">
@@ -42,7 +37,7 @@ export default function Hero() {
             className="w-fit inline-block px-6 py-3 rounded-full font-medium text-base shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300 mx-auto lg:mx-0"
             style={{
               background: "var(--cta-grad)",
-              color: "#fff", // u oba moda bijeli tekst će stajati fino
+              color: "#fff",
             }}
           >
             See my work
@@ -62,7 +57,7 @@ export default function Hero() {
             src={profileImage}
             alt="Njegoš Vasić"
             fill
-            className="object-cover rounded-[2rem] scale-105 hover:scale-110 transition-transform duration-500"
+            className="object-cover rounded-[2rem]" // 👈 nema više scale efekta
             priority
             sizes="(min-width:1024px) 33vw, 100vw"
           />

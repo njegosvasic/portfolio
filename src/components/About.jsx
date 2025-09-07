@@ -13,7 +13,6 @@ export default function AboutSection() {
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Left: image with overlayed text */}
         <div className="relative w-full rounded-3xl overflow-hidden">
           <Image
             src={profileImage}
@@ -25,7 +24,6 @@ export default function AboutSection() {
             priority
           />
 
-          {/* Overlay bez skrola: fontovi fluidni da uvek stanu */}
           <div
             className="
               absolute inset-0 rounded-3xl
@@ -40,7 +38,6 @@ export default function AboutSection() {
             <h3
               className="font-semibold"
               style={{
-                // veći minimum na telefonu, manji plafon na desktopu
                 fontSize: "clamp(18px, 2.5vw, 24px)",
                 lineHeight: "1.2",
               }}
@@ -50,7 +47,6 @@ export default function AboutSection() {
 
             <p
               style={{
-                // mob min 12px, desktop max 14px
                 fontSize: "clamp(12px, 1.6vw, 14px)",
                 lineHeight: "1.45",
               }}
