@@ -1,56 +1,72 @@
+// src/components/Hero.jsx
 import Image from "next/image";
 import profileImage from "../assets/ja.png";
 
 export default function Hero() {
   return (
     <section
-      id="hero"
-      className="px-8 py-8 flex flex-col md:flex-row md:items-stretch gap-8"
+      className="px-4 md:px-6 py-10 md:py-20 relative"
+      style={{ "--heroSquare": "clamp(280px, 32vw, 480px)" }}
     >
-      {/* Lijeva kolona: 62.5% – gradient preko CSS varijabli (light/dark) */}
-      <div
-        className="w-full md:w-[62.5%] rounded-3xl p-10 flex flex-col justify-center space-y-8 shadow-lg dark:shadow-none transition-colors"
-        style={{
-          background: `
-            radial-gradient(at 55% 55%, var(--hero-grad1) 0, transparent 35%),
-            radial-gradient(at 65% 65%, var(--hero-grad2) 0, transparent 35%),
-            var(--hero-base)
-          `,
-        }}
-      >
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[var(--foreground)]">
-            Hey,<br />
-            I'm Njegoš, a UX/UI designer<br />
-            and front-end developer
+      <div className="mx-auto max-w-[1200px] grid gap-10 lg:gap-16 lg:grid-cols-[1.2fr_1fr] items-center">
+        {/* Leva strana */}
+        <div className="flex flex-col gap-6 text-center lg:text-left">
+          <h1
+            className={`
+    text-3xl sm:text-4xl md:text-4xl font-extrabold
+    tracking-tight leading-snug sm:leading-tight md:leading-[1.1]
+    bg-clip-text text-transparent
+  `}
+            style={{
+              backgroundImage: `linear-gradient(to right, var(--hero-grad1), var(--hero-grad2))`,
+            }}
+          >
+            Hey, I&apos;m Njegoš <br />
+            <span className="text-[var(--foreground)]">
+              UX/UI Designer
+            </span>{" "}
+            <br />
+            <span className="text-[var(--foreground)]">
+              Front-end Developer
+            </span>
           </h1>
-          <p className="text-lg leading-relaxed text-[var(--foreground)]">
-            Creating fresh, user-friendly designs and snappy, responsive
-            front-ends. I love turning complex problems into simple, beautiful
-            solutions.
+
+          <p className="max-w-lg mx-auto lg:mx-0 text-base md:text-lg leading-relaxed text-[var(--foreground)]/80">
+            I craft modern, user-friendly designs and build responsive
+            front-ends that feel fast and natural. My passion is turning complex
+            problems into simple, beautiful solutions.
           </p>
+
+          <a
+            href="#projects"
+            className="w-fit inline-block px-6 py-3 rounded-full font-medium text-base shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300 mx-auto lg:mx-0"
+            style={{
+              background: "var(--cta-grad)",
+              color: "#fff", // u oba moda bijeli tekst će stajati fino
+            }}
+          >
+            See my work
+          </a>
         </div>
 
-        {/* CTA – crno u light, bijelo u dark */}
-        <a
-          href="#projects"
-          className="w-max inline-block px-6 py-3 rounded-full font-medium transition-opacity duration-200 hover:opacity-80"
-          style={{ backgroundColor: "var(--cta-bg)", color: "var(--cta-fg)" }}
+        {/* Desna strana */}
+        <div
+          className="relative rounded-[2rem] overflow-hidden mx-auto lg:justify-self-end shadow-xl"
+          style={{
+            width: "var(--heroSquare)",
+            height: "var(--heroSquare)",
+            background: "var(--hero-base)",
+          }}
         >
-          See my work
-        </a>
-      </div>
-
-      {/* Desna kolona: 37.5% – identično kao prije (bez kropljenja) */}
-      <div className="w-full md:w-[37.5%] rounded-3xl overflow-hidden shadow-lg dark:shadow-none">
-        <Image
-          src={profileImage}
-          alt="Njegoš Vasić"
-          width={800}
-          height={600}
-          className="w-full h-auto object-contain"
-          priority
-        />
+          <Image
+            src={profileImage}
+            alt="Njegoš Vasić"
+            fill
+            className="object-cover rounded-[2rem] scale-105 hover:scale-110 transition-transform duration-500"
+            priority
+            sizes="(min-width:1024px) 33vw, 100vw"
+          />
+        </div>
       </div>
     </section>
   );

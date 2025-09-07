@@ -3,7 +3,7 @@ import { Open_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Providers } from "./providers";
-import BackToTop from "@/components/BackToTop"; // 👈 dodato
+import BackToTop from "@/components/BackToTop";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -28,8 +28,6 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
-
-          {/* 👇 Strelica za Back to Top */}
           <BackToTop />
         </Providers>
       </body>

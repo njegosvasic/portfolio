@@ -4,9 +4,9 @@ import profileImage from "../assets/ja.png";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="px-4 md:px-24 py-16">
+    <section id="about" className="px-4 md:px-4 py-16">
       <h2
-        className="text-6xl md:text-8xl font-bold uppercase text-center mb-12"
+        className="text-5xl md:text-7xl font-bold uppercase text-center mb-12"
         style={{ WebkitTextStroke: "1px #000", color: "transparent" }}
       >
         About
@@ -24,9 +24,38 @@ export default function AboutSection() {
             className="rounded-3xl object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/70 text-white p-6 sm:p-8 flex flex-col justify-center space-y-4 rounded-3xl">
-            <h3 className="text-2xl sm:text-3xl font-semibold">About me</h3>
-            <p className="text-sm sm:text-base leading-relaxed">
+
+          {/* Overlay bez skrola: fontovi fluidni da uvek stanu */}
+          <div
+            className="
+              absolute inset-0 rounded-3xl
+              bg-black/70 text-white
+              flex flex-col justify-center
+              space-y-[clamp(8px,1.6vw,14px)]
+            "
+            style={{
+              padding: "clamp(12px, 2.5vw, 24px)",
+            }}
+          >
+            <h3
+              className="font-semibold"
+              style={{
+                // veći minimum na telefonu, manji plafon na desktopu
+                fontSize: "clamp(18px, 2.5vw, 24px)",
+                lineHeight: "1.2",
+              }}
+            >
+              About me
+            </h3>
+
+            <p
+              style={{
+                // mob min 12px, desktop max 14px
+                fontSize: "clamp(12px, 1.6vw, 14px)",
+                lineHeight: "1.45",
+              }}
+              className="opacity-95"
+            >
               My journey into UX/UI design started back in my IT student days,
               when I realized how much I enjoyed thinking about how people
               interact with technology. Over time, that interest grew into a
@@ -43,31 +72,44 @@ export default function AboutSection() {
               right to use.
             </p>
 
-            <p className="text-sm sm:text-base leading-relaxed">
+            <p
+              style={{
+                fontSize: "clamp(12px, 1.5vw, 14px)",
+                lineHeight: "1.45",
+              }}
+              className="opacity-95"
+            >
               Outside of design, I try to keep things balanced. I like unwinding
               with a good video game, hitting the gym to stay active,
               experimenting with cooking (sometimes successfully), and getting
               lost in a book when I can.
             </p>
 
-            <p className="text-sm sm:text-base leading-relaxed">
+            <p
+              style={{
+                fontSize: "clamp(12px, 1.6vw, 14px)",
+                lineHeight: "1.45",
+              }}
+              className="opacity-95"
+            >
               These days, I’m focused on designing clean, intuitive digital
-              products — and since I also enjoy front-end development, I love
+              products; and since I also enjoy front-end development, I love
               bringing those designs to life. I'm always learning and exploring
               new tools and trends to keep growing and improving.
             </p>
           </div>
         </div>
 
-        {/* Right: 2x2 stats */}
         <div className="grid grid-cols-2 gap-4 content-center">
           <div
             className="aspect-square rounded-3xl flex flex-col items-center justify-center text-white"
             style={{ backgroundColor: "var(--about-green)" }}
           >
-            <span className="text-3xl sm:text-4xl lg:text-6xl font-bold">
+            {/* broj */}
+            <span className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               2+
             </span>
+            {/* labela */}
             <span className="mt-2 text-sm sm:text-base lg:text-lg">
               Years Experience
             </span>
@@ -77,7 +119,7 @@ export default function AboutSection() {
             className="aspect-square rounded-3xl flex flex-col items-center justify-center text-white"
             style={{ backgroundColor: "var(--about-yellow)" }}
           >
-            <span className="text-3xl sm:text-4xl lg:text-6xl font-bold">
+            <span className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               10+
             </span>
             <span className="mt-2 text-sm sm:text-base lg:text-lg">
@@ -89,7 +131,7 @@ export default function AboutSection() {
             className="aspect-square rounded-3xl flex flex-col items-center justify-center text-white"
             style={{ backgroundColor: "var(--about-red)" }}
           >
-            <span className="text-3xl sm:text-4xl lg:text-6xl font-bold">
+            <span className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               10+
             </span>
             <span className="mt-2 text-sm sm:text-base lg:text-lg">
@@ -101,7 +143,7 @@ export default function AboutSection() {
             className="aspect-square rounded-3xl flex flex-col items-center justify-center text-white"
             style={{ backgroundColor: "var(--about-blue)" }}
           >
-            <span className="text-3xl sm:text-4xl lg:text-6xl font-bold">
+            <span className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               100%
             </span>
             <span className="mt-2 text-sm sm:text-base lg:text-lg">

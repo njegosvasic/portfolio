@@ -10,6 +10,7 @@
   --hero-base: #eaebec;
   --hero-grad1: #68eed3;
   --hero-grad2: #00cc4b;
+  --cta-grad: linear-gradient(130deg, #68eed3, #00cc4b); /* light */
   --about-green: #22c55e; /* light */
   --about-yellow: #facc15;
   --about-red: #ef4444;
@@ -45,6 +46,8 @@ body {
   --hero-base: #0f172a;
   --hero-grad1: #4f46e5; /* indigo/plava */
   --hero-grad2: #9333ea; /* ljubičasta */
+   
+   --cta-grad: linear-gradient(130deg, #4f46e5, #9333ea); /* dark */
   --about-green: #10b981; /* emerald / neon zelena */
   --about-yellow: #eab308; /* amber / zlata */
   --about-red: #ec4899; /* pinkish / fuchsia */
