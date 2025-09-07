@@ -9,7 +9,6 @@ export default function Hero() {
       style={{ "--heroSquare": "clamp(280px, 32vw, 480px)" }}
     >
       <div className="mx-auto max-w-[1200px] grid gap-10 lg:gap-16 lg:grid-cols-[1.2fr_1fr] items-center">
-        {/* Leva strana */}
         <div className="flex flex-col gap-6 text-center lg:text-left">
           <h1
             className={`
@@ -22,8 +21,13 @@ export default function Hero() {
             }}
           >
             Hey, I&apos;m Njegoš <br />
-            <span className="text-[var(--foreground)]">UX/UI Designer</span> <br />
-            <span className="text-[var(--foreground)]">Front-end Developer</span>
+            <span className="text-[var(--foreground)]">
+              UX/UI Designer
+            </span>{" "}
+            <br />
+            <span className="text-[var(--foreground)]">
+              Front-end Developer
+            </span>
           </h1>
 
           <p className="max-w-lg mx-auto lg:mx-0 text-base md:text-lg leading-relaxed text-[var(--foreground)]/80">
@@ -44,7 +48,6 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Desna strana */}
         <div
           className="relative rounded-[2rem] overflow-hidden mx-auto lg:justify-self-end shadow-xl"
           style={{
@@ -57,7 +60,7 @@ export default function Hero() {
             src={profileImage}
             alt="Njegoš Vasić"
             fill
-            className="object-cover rounded-[2rem]" // 👈 nema više scale efekta
+            className="object-cover rounded-[2rem]"
             priority
             sizes="(min-width:1024px) 33vw, 100vw"
           />
