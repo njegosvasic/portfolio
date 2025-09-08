@@ -48,10 +48,7 @@ export default function Work() {
           <ChevronDown size={40} strokeWidth={1.2} />
         </div>
 
-        <h2
-          className="text-6xl md:text-8xl font-bold uppercase text-center"
-          style={{ WebkitTextStroke: "1.5px #000", color: "transparent" }}
-        >
+        <h2 className="text-6xl md:text-8xl font-bold uppercase text-center text-black dark:text-white">
           Work
         </h2>
 
@@ -73,10 +70,7 @@ export default function Work() {
           return (
             <div key={proj.id} className="flex flex-col gap-2 items-center">
               {/* Role tekst */}
-              <p
-                className="text-base sm:text-lg font-semibold uppercase"
-                style={{ WebkitTextStroke: "0.5px #000", color: "transparent" }}
-              >
+              <p className="text-base sm:text-lg font-semibold uppercase text-black dark:text-white">
                 {proj.role}
               </p>
 

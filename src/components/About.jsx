@@ -5,10 +5,7 @@ import profileImage from "../assets/ja.png";
 export default function AboutSection() {
   return (
     <section id="about" className="px-4 md:px-4 py-16">
-      <h2
-        className="text-5xl md:text-7xl font-bold uppercase text-center mb-12"
-        style={{ WebkitTextStroke: "1px #000", color: "transparent" }}
-      >
+      <h2 className="text-6xl md:text-8xl font-bold uppercase text-center mb-12 text-[var(--foreground)]">
         About
       </h2>
 
