@@ -9,7 +9,7 @@ export default function AboutSection() {
         About
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-[1200px] mx-auto">
         <div className="relative w-full rounded-3xl overflow-hidden">
           <Image
             src={profileImage}

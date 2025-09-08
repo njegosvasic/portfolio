@@ -5,18 +5,35 @@ import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme(); // koristi resolvedTheme
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
+  const isLight = resolvedTheme === "light";
+
   return (
     <button
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="p-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+      onClick={() => setTheme(isLight ? "dark" : "light")}
+      className={[
+        "group p-2 rounded-full border transition-colors",
+        isLight
+          ? "bg-white border-gray-300 hover:bg-black"
+          : "bg-black border-gray-600 hover:bg-white",
+      ].join(" ")}
     >
-      {theme === "light" ? <Sun size={20} /> : <Moon size={20} />}
+      {isLight ? (
+        <Sun
+          size={20}
+          className="text-black transition-colors group-hover:text-white"
+        />
+      ) : (
+        <Moon
+          size={20}
+          className="text-white transition-colors group-hover:text-black"
+        />
+      )}
     </button>
   );
 }

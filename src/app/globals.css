@@ -18,6 +18,7 @@
 
   --cta-bg: #000000;
   --cta-fg: #ffffff;
+  --cta-hover: #374151; /* gray-700 */
 }
 
 /* prefers-color-scheme blok ostaje kako si stavio */
@@ -53,8 +54,8 @@ body {
 
   --cta-bg: #ffffff;
   --cta-fg: #000000;
+  --cta-hover: #e5e7eb; /* gray-200 */
 }
-
 
 #projects h2,
 #projects p {
@@ -62,10 +63,8 @@ body {
   -webkit-text-stroke: 0;
 }
 
-
 .dark .outline-heading,
 .dark .outline-sub {
   -webkit-text-stroke: 0;
   color: var(--foreground);
 }
-
