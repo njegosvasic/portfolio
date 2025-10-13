@@ -98,11 +98,9 @@ export default function AboutSection() {
             className="aspect-square rounded-3xl flex flex-col items-center justify-center text-white"
             style={{ backgroundColor: "var(--about-green)" }}
           >
-            {/* broj */}
             <span className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-              2+
+              3+
             </span>
-            {/* labela */}
             <span className="mt-2 text-sm sm:text-base lg:text-lg">
               Years Experience
             </span>
