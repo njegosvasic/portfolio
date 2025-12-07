@@ -50,7 +50,7 @@ export default function HabitWavePage() {
       <div className="max-w-3xl mx-auto text-center space-y-6">
         <h2 className={h2}>My Role</h2>
         <p className={p}>
-          In the HabitWave project, I was involved in several key areas of UX/UI
+          In the HabitWave project, I was involved in several key areas of UX/U
           design, including:
         </p>
         <ul className="list-disc list-inside text-left text-lg space-y-1">
