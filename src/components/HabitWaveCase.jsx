@@ -8,6 +8,8 @@ import features from "@/assets/habitwave/features.png";
 import paperWireframe from "@/assets/habitwave/paperwireframe.png";
 import digitalWireframe from "@/assets/habitwave/digitalwireframe.png";
 import usabilityStudy from "@/assets/habitwave/usabilitystudy.png";
+import lowFidelity from "@/assets/habitwave/lowfi.PNG";
+import highFidelity from "@/assets/habitwave/highfi.PNG";
 import seaburyImage from "@/assets/habitwave/seabury.png";
 import inkyImage from "@/assets/habitwave/inkyy.png";
 
